@@ -49,12 +49,12 @@ public class Exam01 {
 					addrMap.put(colList.get(i), lines[i]);
 				}
 				addrList.add(addrMap); 
-				if (addrList.size() == 100000) {
+				if (addrList.size() == 1000) {
 					Long subStime = System.currentTimeMillis();
 					int result = adao.insertAddressList(addrList);
 					addrList.clear();
 					System.out.println("반영된 건수 : " + result);
-					System.out.println("10000개 insert 완료시간 : " + (System.currentTimeMillis() - subStime));
+					System.out.println("1000개 insert 완료시간 : " + (System.currentTimeMillis() - subStime));
 				}
 				
 			}
@@ -71,27 +71,5 @@ public class Exam01 {
 		}
 		System.out.println("전체 수행 시간 : " + (System.currentTimeMillis() - sTime));
 
-//		String addr = "4413111600|충청남도|천안시 동남구|신방동||0|95|5|441312249001|0|84|0|43457|";
-//		String[] addrs = addr.split("\\|");
-//		System.out.println(addrs.length);
-//		List<String> colList = new ArrayList<>();
-//		colList.add("ad_code");
-//		colList.add("ad_sido");
-//		colList.add("ad_gugun");
-//		colList.add("ad_dong");
-//		colList.add("ad_lee");
-//		colList.add("ad_san");
-//		colList.add("ad_bunji");
-//		colList.add("ad_ho");
-//		colList.add("ad_roadcode");
-//		colList.add("ad_isbase");
-//		colList.add("ad_orgnum");
-//		colList.add("ad_subnum");
-//		colList.add("ad_jinum");
-//		colList.add("ad_etc");
-//		Map<String, String> addMap = new HashMap<>();
-//		for (int i = 0; i < addrs.length; i++) {
-//			addMap.put(colList.get(i), addrs[i]);
-//		}
 	}
 }
