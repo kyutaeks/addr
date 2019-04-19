@@ -2,7 +2,6 @@ package com.addr.db.impl;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -40,11 +39,16 @@ public class AddressDAOImpl implements AddressDAO {
 				}
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		return cnt;
+	}
+
+	@Override
+	public List<Map<String, String>> selectAddrList(List<Map<String, String>> addrList) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 
